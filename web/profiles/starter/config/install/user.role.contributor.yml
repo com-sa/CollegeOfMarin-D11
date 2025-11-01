@@ -1,0 +1,72 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+    - filter.format.webform_default
+    - media.type.document
+    - media.type.image
+    - node.type.article
+    - node.type.event
+    - node.type.page
+    - node.type.staff
+  module:
+    - contextual
+    - file
+    - filter
+    - media
+    - node
+    - system
+    - toolbar
+id: contributor
+label: Contributor
+weight: 3
+is_admin: null
+permissions:
+  - 'access administration pages'
+  - 'access content overview'
+  - 'access contextual links'
+  - 'access files overview'
+  - 'access in-place editing'
+  - 'access media overview'
+  - 'access toolbar'
+  - 'bypass honeypot protection'
+  - 'create article content'
+  - 'create document media'
+  - 'create event content'
+  - 'create image media'
+  - 'create media'
+  - 'delete any article content'
+  - 'delete any document media'
+  - 'delete any event content'
+  - 'delete any image media'
+  - 'delete any media'
+  - 'delete media'
+  - 'delete own article content'
+  - 'delete own document media'
+  - 'delete own event content'
+  - 'delete own image media'
+  - 'delete own page content'
+  - 'edit any article content'
+  - 'edit any document media'
+  - 'edit any event content'
+  - 'edit any image media'
+  - 'edit any page content'
+  - 'edit own article content'
+  - 'edit own document media'
+  - 'edit own event content'
+  - 'edit own image media'
+  - 'edit own page content'
+  - 'revert article revisions'
+  - 'revert event revisions'
+  - 'revert staff revisions'
+  - 'update any media'
+  - 'update media'
+  - 'use text format full_html'
+  - 'use text format webform_default'
+  - 'view all media revisions'
+  - 'view article revisions'
+  - 'view event revisions'
+  - 'view own unpublished content'
+  - 'view staff revisions'
+  - 'view the administration theme'
