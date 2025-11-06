@@ -1,7 +1,6 @@
 /* ---------------------------------------------------------------------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------------------------------------------------------------------- */
-
 /* ELEMENTS: COLOR PALETTE
 ----------------------------------------------- */
 /*
@@ -17,7 +16,6 @@
 	Steel Gray - #666: #666;
 	Night Gray - #333: #333;
 	COM Black - #231f20: #231f20;
-
 */
 
 :root {
@@ -1245,6 +1243,10 @@ section.block:before, section.block:after {
 #region-content article.full:not(.type-staff,.type-event) .block,
 #region-content article.full:where(.type-staff,.type-event) .grid-x > .cell .layout-builder-item {
 	margin-block: 0;
+}
+
+.block-subtheme-content:has(.view-mode-full:empty) {
+	display: none;
 }
 
 .sidebar .block:not(.layout-builder-item) {

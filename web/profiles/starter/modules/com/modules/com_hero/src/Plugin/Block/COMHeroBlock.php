@@ -28,18 +28,18 @@ class COMHeroBlock extends BlockBase {
 			$media = Media::load($media_target[0]['target_id']);
 			if ($media) {
 				$media_field = $media->get('field_media_image')->first()->getValue();
-				$file = File::load($media_field['target_id']);			
-				$image = $file ? file_create_url($file->getFileUri()) : NULL;
+				$file = File::load($media_field['target_id']);
+				$image = $file ? \Drupal::service('file_url_generator')->generateAbsoluteString($file->getFileUri()) : NULL;
 			}
 		}
-		
+
 		return $image;
 	}
 
 
 	public function build() {
 		$theme = 'carousel';
-		$language = \Drupal::languageManager()->getCurrentLanguage()->getId();		
+		$language = \Drupal::languageManager()->getCurrentLanguage()->getId();
 		$node = \Drupal::request()->attributes->get('node');
 		$field = $node->field_hero;
 
@@ -53,16 +53,16 @@ class COMHeroBlock extends BlockBase {
 				$bundle = $hero->getType();
 				if ($hero->isTranslatable()) { $hero = $hero->getTranslation($language); }
 
-				
+
 				if ($bundle == "carousel") {
-				
+
 					$carousel_paragraphs = $hero->field_item->getValue();
-	
+
 					if ($carousel_paragraphs) {
 						$carousel_first_item = Paragraph::load($carousel_paragraphs[0]['target_id']);
-	
+
 						//if ($bundle == 'carousel_item') {
-							
+
 						$disable_animation = FALSE;
 						$animation_values = $hero->field_animation->getValue();
 						if (!count($animation_values)) {
@@ -75,7 +75,7 @@ class COMHeroBlock extends BlockBase {
 								$animation_value
 							);
 						}
-						
+
 						$autoplay = $hero->field_autoplay->value;
 						$arrows = $hero->field_arrows->value;
 						$dots = $hero->field_dots->value;
@@ -83,8 +83,8 @@ class COMHeroBlock extends BlockBase {
 						$pause_on_hover = $hero->field_pause_on_hover->value;
 						$timer = $hero->field_timer->value;
 						$scroll_down = $hero->field_scroll_down->value;
-						
-	
+
+
 						$carousel_meta = [
 							'autoplay' => $autoplay ? "true" : "false",
 							'arrows' => $arrows,
@@ -103,7 +103,7 @@ class COMHeroBlock extends BlockBase {
 							if ($carousel->isTranslatable()) {
 								$carousel = $carousel->getTranslation($language);
 							}
-			
+
 							$image = $this->getImageFromMedia( $carousel->get('field_image')->getValue() );
 							if ($image) {
 								$items[] = array(
@@ -129,11 +129,11 @@ class COMHeroBlock extends BlockBase {
 
 		if (count($items) >= 1) {
 			$render = [
-				'#theme' => $bundle, 
+				'#theme' => $bundle,
 				'#items' => $items,
 				'#cache' => ['max-age' => 0,]
 			];
-			
+
 			if (isset($carousel_meta)) {
 				$render['#meta'] = $carousel_meta;
 			}
@@ -141,9 +141,9 @@ class COMHeroBlock extends BlockBase {
 			$render = [
 				'#attributes' => ['class' => ['empty']],
 				'#cache' => ['max-age' => 0,]
-			];	
+			];
 		}
-	
+
 		return $render;
 	}
 }
