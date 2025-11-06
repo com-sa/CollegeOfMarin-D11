@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6ce3375c04c71cc304f04528e2106324",
+    "content-hash": "33bcd84a2fbb199c45bbeb415ab8ceb4",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -319,16 +319,16 @@
         },
         {
             "name": "colinodell/psr-testlogger",
-            "version": "v1.3.0",
+            "version": "v1.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/colinodell/psr-testlogger.git",
-                "reference": "291f5b70ea0d3139787d18f442365a8e2784a462"
+                "reference": "2f99e75f4b9f34656bfff7cb68ea78b2c23caa91"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/colinodell/psr-testlogger/zipball/291f5b70ea0d3139787d18f442365a8e2784a462",
-                "reference": "291f5b70ea0d3139787d18f442365a8e2784a462",
+                "url": "https://api.github.com/repos/colinodell/psr-testlogger/zipball/2f99e75f4b9f34656bfff7cb68ea78b2c23caa91",
+                "reference": "2f99e75f4b9f34656bfff7cb68ea78b2c23caa91",
                 "shasum": ""
             },
             "require": {
@@ -394,20 +394,20 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-11-29T23:03:34+00:00"
+            "time": "2025-11-04T22:36:58+00:00"
         },
         {
             "name": "composer/ca-bundle",
-            "version": "1.5.8",
+            "version": "1.5.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/ca-bundle.git",
-                "reference": "719026bb30813accb68271fee7e39552a58e9f65"
+                "reference": "1905981ee626e6f852448b7aaa978f8666c5bc54"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/ca-bundle/zipball/719026bb30813accb68271fee7e39552a58e9f65",
-                "reference": "719026bb30813accb68271fee7e39552a58e9f65",
+                "url": "https://api.github.com/repos/composer/ca-bundle/zipball/1905981ee626e6f852448b7aaa978f8666c5bc54",
+                "reference": "1905981ee626e6f852448b7aaa978f8666c5bc54",
                 "shasum": ""
             },
             "require": {
@@ -454,7 +454,7 @@
             "support": {
                 "irc": "irc://irc.freenode.org/composer",
                 "issues": "https://github.com/composer/ca-bundle/issues",
-                "source": "https://github.com/composer/ca-bundle/tree/1.5.8"
+                "source": "https://github.com/composer/ca-bundle/tree/1.5.9"
             },
             "funding": [
                 {
@@ -466,7 +466,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-08-20T18:49:47+00:00"
+            "time": "2025-11-06T11:46:17+00:00"
         },
         {
             "name": "composer/class-map-generator",
@@ -2253,6 +2253,55 @@
             }
         },
         {
+            "name": "drupal/asset_injector",
+            "version": "2.21.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/asset_injector.git",
+                "reference": "8.x-2.21"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/asset_injector-8.x-2.21.zip",
+                "reference": "8.x-2.21",
+                "shasum": "24dc111e995d6a33cb9f11f106b0d1e716e92767"
+            },
+            "require": {
+                "drupal/core": "^10.3 || ^11"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-2.21",
+                    "datestamp": "1723044656",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Mike Decker",
+                    "homepage": "https://www.drupal.org/u/pookmish"
+                },
+                {
+                    "name": "Axel Rutz",
+                    "homepage": "https://www.drupal.org/u/axelrutz"
+                }
+            ],
+            "description": "Adds CSS or JS to the page output based on configurable rules.",
+            "homepage": "http://drupal.org/project/asset_injector",
+            "support": {
+                "source": "https://git.drupalcode.org/project/asset_injector",
+                "issues": "https://www.drupal.org/project/issues/asset_injector"
+            }
+        },
+        {
             "name": "drupal/block_class",
             "version": "3.0.0",
             "source": {
@@ -2273,7 +2322,7 @@
             "extra": {
                 "drupal": {
                     "version": "3.0.0",
-                    "datestamp": "1723241676",
+                    "datestamp": "1762396262",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -2524,6 +2573,54 @@
             "time": "2025-10-16T12:23:49+00:00"
         },
         {
+            "name": "drupal/config_delete",
+            "version": "2.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/config_delete.git",
+                "reference": "2.0.3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/config_delete-2.0.3.zip",
+                "reference": "2.0.3",
+                "shasum": "1a55ff6b18d6121239b77a9664944d60746ca789"
+            },
+            "require": {
+                "drupal/core": "^10 || ^11"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.3",
+                    "datestamp": "1734796615",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Goran Nikolovski",
+                    "homepage": "https://gorannikolovski.com",
+                    "email": "goran@gorannikolovski.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Delete configuration items from the UI.",
+            "homepage": "https://www.drupal.org/project/config_delete",
+            "support": {
+                "source": "https://git.drupalcode.org/project/config_delete",
+                "issues": "https://www.drupal.org/project/issues/config_delete",
+                "email": "goran@gorannikolovski.com"
+            }
+        },
+        {
             "name": "drupal/content_access",
             "version": "2.1.0-rc1",
             "source": {
@@ -2580,16 +2677,16 @@
         },
         {
             "name": "drupal/core",
-            "version": "11.2.5",
+            "version": "11.2.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core.git",
-                "reference": "cdfdb569ac089c877dba27534c7a89cf3fdd36c4"
+                "reference": "94ea889d00dceb1726b2fd9756cc30be9c7f3b47"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core/zipball/cdfdb569ac089c877dba27534c7a89cf3fdd36c4",
-                "reference": "cdfdb569ac089c877dba27534c7a89cf3fdd36c4",
+                "url": "https://api.github.com/repos/drupal/core/zipball/94ea889d00dceb1726b2fd9756cc30be9c7f3b47",
+                "reference": "94ea889d00dceb1726b2fd9756cc30be9c7f3b47",
                 "shasum": ""
             },
             "require": {
@@ -2746,13 +2843,13 @@
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
             "support": {
-                "source": "https://github.com/drupal/core/tree/11.2.5"
+                "source": "https://github.com/drupal/core/tree/11.2.6"
             },
-            "time": "2025-10-02T07:24:02+00:00"
+            "time": "2025-11-06T04:00:59+00:00"
         },
         {
             "name": "drupal/core-composer-scaffold",
-            "version": "11.2.5",
+            "version": "11.2.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-composer-scaffold.git",
@@ -2796,13 +2893,13 @@
                 "drupal"
             ],
             "support": {
-                "source": "https://github.com/drupal/core-composer-scaffold/tree/11.2.5"
+                "source": "https://github.com/drupal/core-composer-scaffold/tree/11.2.7"
             },
             "time": "2025-05-05T16:18:58+00:00"
         },
         {
             "name": "drupal/core-dev",
-            "version": "11.2.5",
+            "version": "11.2.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-dev.git",
@@ -2851,13 +2948,13 @@
             ],
             "description": "require-dev dependencies from drupal/drupal; use in addition to drupal/core-recommended to run tests from drupal/core.",
             "support": {
-                "source": "https://github.com/drupal/core-dev/tree/11.2.5"
+                "source": "https://github.com/drupal/core-dev/tree/11.2.6"
             },
             "time": "2025-06-29T21:12:09+00:00"
         },
         {
             "name": "drupal/core-project-message",
-            "version": "11.2.5",
+            "version": "11.2.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-project-message.git",
@@ -2892,22 +2989,22 @@
                 "drupal"
             ],
             "support": {
-                "source": "https://github.com/drupal/core-project-message/tree/11.2.5"
+                "source": "https://github.com/drupal/core-project-message/tree/11.3.0-alpha1"
             },
             "time": "2025-02-03T10:59:29+00:00"
         },
         {
             "name": "drupal/core-recipe-unpack",
-            "version": "11.2.5",
+            "version": "11.2.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-recipe-unpack.git",
-                "reference": "fbdb482eb5e9d785e5840b3dbdfbcffd5af0e3e3"
+                "reference": "7a48dd030f613f0154cb65d3ad68ee95d56383e8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core-recipe-unpack/zipball/fbdb482eb5e9d785e5840b3dbdfbcffd5af0e3e3",
-                "reference": "fbdb482eb5e9d785e5840b3dbdfbcffd5af0e3e3",
+                "url": "https://api.github.com/repos/drupal/core-recipe-unpack/zipball/7a48dd030f613f0154cb65d3ad68ee95d56383e8",
+                "reference": "7a48dd030f613f0154cb65d3ad68ee95d56383e8",
                 "shasum": ""
             },
             "require": {
@@ -2936,22 +3033,22 @@
                 "drupal"
             ],
             "support": {
-                "source": "https://github.com/drupal/core-recipe-unpack/tree/11.2.5"
+                "source": "https://github.com/drupal/core-recipe-unpack/tree/11.2.7"
             },
-            "time": "2025-07-22T05:40:47+00:00"
+            "time": "2025-10-28T11:20:27+00:00"
         },
         {
             "name": "drupal/core-recommended",
-            "version": "11.2.5",
+            "version": "11.2.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-recommended.git",
-                "reference": "e837a38334533c122db7b0d4727783ccb7a06859"
+                "reference": "04ce4674c562518edde80b0436ef58a0e9f9eba1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core-recommended/zipball/e837a38334533c122db7b0d4727783ccb7a06859",
-                "reference": "e837a38334533c122db7b0d4727783ccb7a06859",
+                "url": "https://api.github.com/repos/drupal/core-recommended/zipball/04ce4674c562518edde80b0436ef58a0e9f9eba1",
+                "reference": "04ce4674c562518edde80b0436ef58a0e9f9eba1",
                 "shasum": ""
             },
             "require": {
@@ -2960,7 +3057,7 @@
                 "doctrine/annotations": "~2.0.2",
                 "doctrine/deprecations": "~1.1.5",
                 "doctrine/lexer": "~2.1.1",
-                "drupal/core": "11.2.5",
+                "drupal/core": "11.2.6",
                 "egulias/email-validator": "~4.0.4",
                 "guzzlehttp/guzzle": "~7.9.3",
                 "guzzlehttp/promises": "~2.2.0",
@@ -3022,9 +3119,9 @@
             ],
             "description": "Core and its dependencies with known-compatible minor versions. Require this project INSTEAD OF drupal/core.",
             "support": {
-                "source": "https://github.com/drupal/core-recommended/tree/11.2.5"
+                "source": "https://github.com/drupal/core-recommended/tree/11.2.6"
             },
-            "time": "2025-10-02T07:24:02+00:00"
+            "time": "2025-11-06T04:00:59+00:00"
         },
         {
             "name": "drupal/ctools",
@@ -10962,16 +11059,16 @@
         },
         {
             "name": "squizlabs/php_codesniffer",
-            "version": "3.13.4",
+            "version": "3.13.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHPCSStandards/PHP_CodeSniffer.git",
-                "reference": "ad545ea9c1b7d270ce0fc9cbfb884161cd706119"
+                "reference": "0ca86845ce43291e8f5692c7356fccf3bcf02bf4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHPCSStandards/PHP_CodeSniffer/zipball/ad545ea9c1b7d270ce0fc9cbfb884161cd706119",
-                "reference": "ad545ea9c1b7d270ce0fc9cbfb884161cd706119",
+                "url": "https://api.github.com/repos/PHPCSStandards/PHP_CodeSniffer/zipball/0ca86845ce43291e8f5692c7356fccf3bcf02bf4",
+                "reference": "0ca86845ce43291e8f5692c7356fccf3bcf02bf4",
                 "shasum": ""
             },
             "require": {
@@ -10988,11 +11085,6 @@
                 "bin/phpcs"
             ],
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.x-dev"
-                }
-            },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "BSD-3-Clause"
@@ -11042,7 +11134,7 @@
                     "type": "thanks_dev"
                 }
             ],
-            "time": "2025-09-05T05:47:09+00:00"
+            "time": "2025-11-04T16:30:35+00:00"
         },
         {
             "name": "staabm/side-effects-detector",
