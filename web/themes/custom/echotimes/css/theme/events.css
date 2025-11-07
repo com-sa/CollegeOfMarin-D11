@@ -81,7 +81,7 @@
 }
 
 
-.type-event.teaser .cell:has(.block):last-child { 
+.type-event.teaser .cell:has(.block):last-child {
 	display: grid;
 	gap: 0.5rem 1rem;
 }
@@ -92,10 +92,10 @@
 		grid-template-columns: 100px auto;
 	}
 
-	.type-event.teaser { 
-		.field-title, 
+	.type-event.teaser {
+		.field-title,
 		.field-body,
-		.layout-builder-item:has(.field--name-title), 
+		.layout-builder-item:has(.field--name-title),
 		.layout-builder-item:has(.field--name-body) {
 			grid-column: span 2;
 		}
@@ -111,16 +111,24 @@
 	margin-block: 0;
 }
 
-.type-event .field-title,
-.type-event .field--name-title {
-	color: #a47c42;
-	font-size: 1.125rem;
-	font-weight: 900;
-  letter-spacing: 0.012em;
-  line-height: 1.1;
-  margin: 0 0 .5rem;
-  padding-top: 0;
-  text-transform: uppercase;   
+.type-event {
+  .field-title,
+  .field--name-title {
+  	color: #a47c42;
+    letter-spacing: 0.012em;
+    line-height: 1.1;
+    margin: 0 0 .5rem;
+    padding-top: 0;
+  }
+
+  &:not(.mini) {
+    .field-title,
+    .field--name-title {
+      font-size: 1.125rem;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+  }
 }
 
 .type-event.teaser .field-title + .field-field_date,
@@ -139,7 +147,7 @@
 }
 
 @media(min-width:601px) {
-	.type-event.teaser .field-field_location, 
+	.type-event.teaser .field-field_location,
 	.type-event.teaser .layout-builder-item:has(.field--name-field-location) {
 		margin-left: 3rem;
 		text-align: right;
@@ -192,7 +200,7 @@
 /*
 .node-event.view-mode-full .location,
 .view-events .location.column {
-	text-align: right; 
+	text-align: right;
 }
 */
 
@@ -345,7 +353,7 @@
 }
 
 .block-com-starter-events-event-info:first-child {
-	margin-top: 2.333rem;	
+	margin-top: 2.333rem;
 }
 
 .block-com-starter-events-event-info > .field,
@@ -358,7 +366,7 @@
 .block-com-starter-events-event-info > .text-content:not(:last-child) {
 	border-bottom: 1px solid #f7f7f7;
 }
- 
+
 .block-com-starter-events-event-info .field-label {
 	font-weight: 700;
 	text-transform: uppercase;
