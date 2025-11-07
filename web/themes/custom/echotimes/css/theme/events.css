@@ -65,7 +65,8 @@
 	font-size: 1.6875rem
 }
 
-.type-event.teaser .field-title + .field-field_date .field--node-field-date {
+.type-event.teaser .field-title + .field-field_date .field--node-field-date,
+.type-event.teaser .layout-builder-item:has(.field--name-title) + .layout-builder-item:has(.field-field_date) .field--node-field-date {
 	text-align: left;
 }
 
@@ -91,8 +92,17 @@
 		grid-template-columns: 100px auto;
 	}
 
-	.type-event.teaser :where(.field-title, .field-body) {
-		grid-column: span 2;
+	.type-event.teaser { 
+		.field-title, 
+		.field-body,
+		.layout-builder-item:has(.field--name-title), 
+		.layout-builder-item:has(.field--name-body) {
+			grid-column: span 2;
+		}
+
+		.field--name-title {
+			margin: 0;
+		}
 	}
 }
 
@@ -101,7 +111,8 @@
 	margin-block: 0;
 }
 
-.type-event .field-title {
+.type-event .field-title,
+.type-event .field--name-title {
 	color: #a47c42;
 	font-size: 1.125rem;
 	font-weight: 900;
@@ -113,19 +124,23 @@
 }
 
 .type-event.teaser .field-title + .field-field_date,
-.type-event.teaser .field-field_location {
+.type-event.teaser .field-field_location,
+.type-event.teaser .layout-builder-item:has(.field--name-field-location),
+.type-event.teaser .layout-builder-item:has(.field--name-title) + .layout-builder-item:has(.field-field_date) {
 	display: inline-block;
 }
 
 .type-event.teaser .field--name-field-date > .field__item:not(.month):not(.day),
 .type-event.teaser .field--name-field-date > .field-item:not(.month):not(.day),
-.type-event.teaser .field-field_location {
+.type-event.teaser .field-field_location,
+.type-event.teaser .field--name-field-location {
 	color: #ccc;
 	padding-bottom: .5rem;
 }
 
 @media(min-width:601px) {
-	.type-event.teaser .field-field_location {
+	.type-event.teaser .field-field_location, 
+	.type-event.teaser .layout-builder-item:has(.field--name-field-location) {
 		margin-left: 3rem;
 		text-align: right;
 	}
@@ -145,12 +160,14 @@
     flex-wrap: wrap;
     gap: .5rem;
 
-    .field-title {
+    .field-title,
+		.field--name-title {
       margin: 0;
       min-width: 100%;
     }
 
-    .field-field_location {
+    .field-field_location,
+		.field--name-field-location {
       margin: 0;
     }
   }

@@ -1,6 +1,7 @@
 /* ---------------------------------------------------------------------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------------------------------------------------------------------- */
+
 /* ELEMENTS: COLOR PALETTE
 ----------------------------------------------- */
 /*
@@ -16,6 +17,7 @@
 	Steel Gray - #666: #666;
 	Night Gray - #333: #333;
 	COM Black - #231f20: #231f20;
+
 */
 
 :root {
@@ -1236,17 +1238,13 @@ section.block:before, section.block:after {
 	margin-top: 1rem;
 }
 
-#region-content > .block:not(.cell) {
+#region-content > .block {
 	width: 100%;
 }
 
 #region-content article.full:not(.type-staff,.type-event) .block,
 #region-content article.full:where(.type-staff,.type-event) .grid-x > .cell .layout-builder-item {
 	margin-block: 0;
-}
-
-.block-subtheme-content:has(.view-mode-full:empty) {
-	display: none;
 }
 
 .sidebar .block:not(.layout-builder-item) {
@@ -1345,6 +1343,10 @@ article.full .field--name-body {
 }*/
 
 .views-field-field-additional-materials-pdf span.file + span {
+	display: none;
+}
+
+.views-field:has(>.field-content:empty) {
 	display: none;
 }
 
