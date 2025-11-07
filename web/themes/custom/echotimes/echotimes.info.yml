@@ -20,6 +20,9 @@ libraries:
 libraries-override:
   zurb_foundation/global: false
 
+ckeditor5-stylesheets:
+  - css/admin/ckeditor.css
+
 # Regions are output in the page.html.twig
 regions:
 #  meta_header: 'Meta Header'
