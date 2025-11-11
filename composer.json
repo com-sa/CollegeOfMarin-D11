@@ -52,6 +52,7 @@
         "drupal/shield": "^1.8",
         "drupal/smtp": "^1.4",
         "drupal/upgrade_status": "^4.3",
+        "drupal/views_bulk_operations": "^4.4",
         "drupal/webform": "^6.3@beta",
         "drupal/weight": "^3.6",
         "drupal/xmlsitemap": "^2.0",
