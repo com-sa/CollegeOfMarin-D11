@@ -34,6 +34,7 @@
         "drupal/core-project-message": "^11.2",
         "drupal/core-recipe-unpack": "^11.2",
         "drupal/core-recommended": "^11.2",
+        "drupal/devel_entity_updates": "^5.0@RC",
         "drupal/editor_advanced_link": "^2.2",
         "drupal/fast_404": "^3.6",
         "drupal/fences": "^3.0",
