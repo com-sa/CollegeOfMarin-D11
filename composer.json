@@ -26,6 +26,7 @@
         "drupal/asset_injector": "^2.21",
         "drupal/block_class": "^3.0",
         "drupal/cas": "^3.0@beta",
+        "drupal/cas_attributes": "^3.0@beta",
         "drupal/ckeditor_html_embed": "^2.0",
         "drupal/config_delete": "^2.0",
         "drupal/content_access": "^2.1@RC",
