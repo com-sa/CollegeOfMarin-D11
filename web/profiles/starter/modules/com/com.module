@@ -217,3 +217,60 @@ function com_layout_alter(&$definitions) {
 function com_toolbar_alter(&$items) {
 	$items['contextual']['tab']['#value'] = t('Editable Areas');
 }
+
+
+/**
+ * Implements hook_views_post_execute().
+ *
+ * This runs right after the query, before fields are rendered,
+ * so it's safe to manipulate $view->result.
+ * 
+ * Used to filter archives block 
+ */
+function com_views_post_execute(ViewExecutable $view) {
+  // Adjust these to match your view's machine name and display.
+  if ($view->id() !== 'blog' || $view->current_display !== 'archives_block') {
+    return;
+  }
+
+  $seen_months = [];
+  $unique_rows = [];
+
+  foreach ($view->result as $row) {
+    // Assuming a node-based view.
+    if (!empty($row->_entity)) {
+      $timestamp = $row->_entity->getCreatedTime();
+    }
+    else {
+      // If we somehow have no entity, just keep the row.
+      $unique_rows[] = $row;
+      continue;
+    }
+
+    // Build a "year-month" key like "2017-03".
+    $key = date('Y-m', $timestamp);
+
+    // Skip duplicates for the same month.
+    if (isset($seen_months[$key])) {
+      continue;
+    }
+
+    $seen_months[$key] = TRUE;
+    $unique_rows[] = $row;
+  }
+
+  // Replace the result set with de-duplicated rows.
+  $view->result = array_values($unique_rows);
+
+  // 🔑 Reindex each row's internal index so Views field rendering lines up.
+  foreach ($view->result as $i => $row) {
+    $row->index = $i;
+  }
+
+  // Keep total_rows and pager consistent (optional but nice).
+  $view->total_rows = count($view->result);
+  if ($view->pager) {
+    $view->pager->total_items = $view->total_rows;
+    $view->pager->updatePageInfo();
+  }
+}
