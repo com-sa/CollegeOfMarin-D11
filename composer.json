@@ -93,7 +93,10 @@
     "extra": {
         "drupal-scaffold": {
             "locations": {
-                "web-root": "./web"
+                "web-root": "./web",
+                "file-mapping": {
+                    "[web-root]/sites/default/default.settings.php": false
+                }
             },
             "allowed-packages": ["pantheon-systems/drupal-integrations"],
             "file-mapping": {
