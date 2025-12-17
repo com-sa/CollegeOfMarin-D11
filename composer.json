@@ -51,6 +51,7 @@
         "drupal/mysql57": "^1.0",
         "drupal/paragraphs": "^1.19",
         "drupal/pathauto": "^1.14",
+        "drupal/private_files_download_permission": "^3.1",
         "drupal/redirect": "^1.12",
         "drupal/seven": "^2.0@beta",
         "drupal/shield": "^1.8",
