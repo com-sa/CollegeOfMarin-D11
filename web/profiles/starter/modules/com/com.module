@@ -21,7 +21,7 @@ function com_theme($existing, $type, $theme, $path) {
 /**
  * Implements hook_token_info().
  */
-function com_token_info() {
+function com_token_info() { 
 	$types = [];
 	$types['com-logo'] = ['name' => t('COM Logo'), 'description' => t('Custom logo token group for COM')];
 	
