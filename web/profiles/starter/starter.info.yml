@@ -1,6 +1,6 @@
 name: Starter
 type: profile
-description: 'Install with commonly used features pre-configured.'
+description: 'Install with commonly used features pre-configured'
 core_version_requirement: '^8.7.7 || ^9 || ^10 || ^11'
 distribution:
   name: SRJC Starter
