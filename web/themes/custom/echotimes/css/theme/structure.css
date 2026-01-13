@@ -979,36 +979,37 @@ ol li {
 }
 
 /* PAGINATION */
-ul.pagination li a {
-	color: #cc8f34;
-	font-size: 1rem;
-}
+ul.pagination li {
+  display: inline-block;
 
-ul.pagination li.current {
-	background: transparent;
-}
+  &.current {
+    background: transparent;
 
-ul.pagination li.current a {
-	background: #cc8f34;
-	color: #fff;
-	cursor: pointer;
+    a {
+      background: #cc8f34;
+      color: #fff;
+      cursor: pointer;
+    }
+  }
+
+  a {
+  	color: #cc8f34;
+  	font-size: 1rem;
+    padding: 0.2625rem 0.725rem 0.2625rem;
+  }
+
+  a:hover,
+  a:focus,
+  &.current a:hover,
+  &.current a:focus {
+    background: #a47c42;
+    color: #fff;
+  }
 }
 
 .item-list .pager li {
 	display: inline-block;
 	float: none;
-}
-
-ul.pagination li a:hover,
-ul.pagination li a:focus,
-ul.pagination li.current a:hover,
-ul.pagination li.current a:focus {
-	background: #a47c42;
-	color: #fff;
-}
-
-ul.pagination li a {
-	padding: 0.2625rem 0.725rem 0.2625rem;
 }
 
 
