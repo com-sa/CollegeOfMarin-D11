@@ -1,0 +1,5 @@
+type: module
+name: Views Cache Bully
+description: 'Skeleton module.'
+package: COM
+core_version_requirement: ^11.0
