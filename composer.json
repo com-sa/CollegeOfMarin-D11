@@ -55,6 +55,7 @@
         "drupal/seven": "^2.0@beta",
         "drupal/shield": "^1.8",
         "drupal/smtp": "^1.4",
+        "drupal/stripe_webform": "^2.0",
         "drupal/upgrade_status": "^4.3",
         "drupal/views_bulk_operations": "^4.4",
         "drupal/views_taxonomy_term_name_into_id": "^1.0",
