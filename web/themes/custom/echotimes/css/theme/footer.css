@@ -101,7 +101,8 @@
 #footer-bottom {
 	background-color: #333;
 	border-top: 6px solid #cc8f34;
-	color: #808080;
+	/*color: #808080;*/
+  color: #9c9c9c;
 	padding-bottom: 1rem;
 	padding-top: 1rem;
 }
