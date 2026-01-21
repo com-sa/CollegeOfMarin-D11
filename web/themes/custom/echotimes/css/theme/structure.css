@@ -1382,7 +1382,7 @@ article.featured .links.inline {
 article.full .date,
 article.full .location,
 article.full .author {
-	color: #ccc;
+	color: #666;
 	font-weight: 500;
 	text-transform: uppercase;
 }

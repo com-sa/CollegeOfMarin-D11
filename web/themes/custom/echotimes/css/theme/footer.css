@@ -3,7 +3,8 @@
 }
 
 #footer a {
-	color: #cc8f34;
+	/*color: #cc8f34;*/
+  color: #926f3a;
 }
 
 #footer-top {
@@ -30,9 +31,10 @@
 
 @media(max-width:900px) and (min-width:601px) {
 	#footer-top ul.cell.address li {
-		float:left;
+		float: left;
 		width: 50%;
 	}
+
 	#footer-top ul.cell.links {
 		/*margin-bottom: 2rem;*/
 		padding: .875rem 1.75rem;
@@ -40,7 +42,7 @@
 	}
 
 	#footer-top ul.cell.links:nth-child(odd) {
-	    padding-left: .875rem;
+		padding-left: .875rem;
 	}
 }
 
@@ -88,7 +90,7 @@
 
 @media(min-width:901px) {
 	#footer-top ul.links {
-	    padding-left: 1.25rem;
+		padding-left: 1.25rem;
 	}
 }
 
@@ -107,7 +109,7 @@
 #footer-bottom h3 {
 	color: #cc8f34;
 	font-size: 1.25rem;
-	line-height:1;
+	line-height: 1;
 	margin: 0;
 	text-transform: uppercase;
 }
