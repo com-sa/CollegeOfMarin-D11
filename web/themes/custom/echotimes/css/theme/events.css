@@ -15,7 +15,9 @@
 		}
 
 		& > .cell:last-of-type {
-		  width: auto;
+      display: grid;
+      grid-template-columns: auto auto;
+		  width: unset;
 		}
 	}
 }
