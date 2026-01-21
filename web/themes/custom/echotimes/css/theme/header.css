@@ -580,17 +580,16 @@
 }
 
 #touch-nav-back {
-	color: #fff;
-}
-
-
-#touch-nav-back {
 	display: none;
 	margin-right: 1rem;
 	position: absolute;
 	right: -100%;
 	top: 1rem;
 	z-index: 2;
+}
+
+#touch-nav-back:not(:hover) {
+  color: #fff;
 }
 
 @media(max-width:1200px) {
