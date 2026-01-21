@@ -27,10 +27,12 @@ function echotimes_preprocess_page(&$variables) {
   $variables['com_url_prefix'] = com_get_multi_site_base_url();
   $variables['com_url_home_prefix'] = com_get_multi_site_home_base_url();
 
-	//$site_config = \Drupal::config('system.site');
+	$site_config = \Drupal::config('system.site');
 	$variables['echotimes_theme_directory'] = \Drupal::service('extension.list.theme')->getPath('echotimes');
 	$variables['site_url'] = $GLOBALS['base_url'];
-	$variables['site_slogan'] = \Drupal::config('system.site')->get('slogan');
+	$variables['site_slogan'] = $site_config->get('slogan');
+  $variables['site_name'] = $site_config->get('name');
+
 	$variables['logo'] = theme_get_setting('logo.url');
 
 	// removing panel and callout classes, added by defaut by zf
@@ -293,14 +295,14 @@ function echotimes_preprocess_menu_local_task(array $variables) {
 	if (in_array($route_name, ['user.login', 'user.pass'])) {
 		$options = $link['url']->getOptions();
 		$class = $options['attributes']['class'];
-		
+
 		/*
 		$index = array_search('button', $class);
 		if ($index>-1) {
 			unset($class[$index]);
 			$link['url']->setOption('attributes', ['class' => $class]);
 		}*/
-	
+
 		if ($route_name == 'user.login' && $link['title'] == 'Log in') {
 			$class[] = 'visually-hidden';
 			$link['url']->setOption('attributes', ['class' => $class]);
@@ -336,7 +338,7 @@ function com_get_multi_site_base_url() {
 			case 'live':
 				$prefix = '';
 				break;
-			default: 
+			default:
 				$prefix = 'dev.';
 		}
 	} else {
