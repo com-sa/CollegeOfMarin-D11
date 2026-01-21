@@ -6,8 +6,10 @@
 	margin-bottom: .75rem !important;
 
 	.view-mode-mini > .grid-x {
-		flex-wrap: nowrap;
+		/*flex-wrap: nowrap;*/
+    display: grid;
     gap: 1rem;
+    grid-template-columns: auto auto;
   	width: 100%;
 
 		& > .cell:first-of-type {
@@ -15,8 +17,6 @@
 		}
 
 		& > .cell:last-of-type {
-      display: grid;
-      grid-template-columns: auto auto;
 		  width: unset;
 		}
 	}
