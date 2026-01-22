@@ -9,7 +9,7 @@
 		/*flex-wrap: nowrap;*/
     display: grid;
     gap: 1rem;
-    grid-template-columns: auto auto;
+    grid-template-columns: auto 1fr;
   	width: 100%;
 
 		& > .cell:first-of-type {
