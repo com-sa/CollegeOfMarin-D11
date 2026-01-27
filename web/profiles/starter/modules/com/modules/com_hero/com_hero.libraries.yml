@@ -1,0 +1,6 @@
+hero:
+  version: 1.x
+  js:
+    js/com_hero.js: {}
+  dependencies:
+    - core/jquery

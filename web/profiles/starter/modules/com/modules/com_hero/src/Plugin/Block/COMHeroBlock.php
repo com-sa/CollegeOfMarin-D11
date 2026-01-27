@@ -129,6 +129,7 @@ class COMHeroBlock extends BlockBase {
 
 		if (count($items) >= 1) {
 			$render = [
+				'#attached' => [ 'library' => ['com_hero/hero'], ],
 				'#theme' => $bundle,
 				'#items' => $items,
 				'#cache' => ['max-age' => 0,]
