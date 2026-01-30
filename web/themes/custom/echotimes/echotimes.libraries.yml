@@ -1,5 +1,5 @@
 global:
-  version: 1.11
+  version: 1.12
   css:
     base:
       css/libraries/foundation-float.css: {}
