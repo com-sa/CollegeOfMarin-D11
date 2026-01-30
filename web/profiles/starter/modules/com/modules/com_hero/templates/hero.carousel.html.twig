@@ -19,7 +19,7 @@
 			</div>
 		{% endif %}
 
-		<ul class="slides orbit-container">		
+		<ul class="slides orbit-container">
 			{% for item in items %}
 				<li class="item slide orbit-slide{% if loop.index == 1 %} is-active{% endif %}" style="background-image:url('{{ item.image }}');">
 					<figure class="orbit-figure">
@@ -37,6 +37,7 @@
 			{% for item in items %}
 		    	<button data-slide="{{ loop.index0 }}"{% if loop.index == 1 %} class="is-active"{% endif %}>
 		    		<span class="show-for-sr">{{ loop.index }}</span>
+            <span class="show-for-sr" data-slide-active-label>Current Slide</span>
 		    	</button>
 	    	{% endfor %}
 		</nav>

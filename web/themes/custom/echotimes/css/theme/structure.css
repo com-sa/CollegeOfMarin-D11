@@ -576,7 +576,8 @@ button.expand a,
 }
 
 .button.secondary {
-	background-color: var(--lemon-curry);
+	/*background-color: var(--lemon-curry);*/
+  background-color: #9a6c1d;
 }
 
 /*
@@ -990,7 +991,8 @@ ul.pagination li.current {
 }
 
 ul.pagination li a {
-  color: #cc8f34;
+  /*color: #cc8f34;*/
+  color: #9b6d27;
   font-size: 1rem;
   padding: 0.2625rem 0.725rem 0.2625rem;
 }
@@ -1881,4 +1883,17 @@ table th {
 		{
 		display: none;
 	}
+}
+
+
+
+#mc_embed_signup {
+  .asterisk {
+    color: #da3b1b;
+  }
+
+  .button {
+    background-color: #4c5762;
+    color: #fefefe;
+  }
 }

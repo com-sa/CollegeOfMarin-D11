@@ -7,7 +7,7 @@
   margin-left: auto;
   margin-right: auto;
   position: relative;
-  width: 1200px;
+  /*width: 1200px;*/
 }
 
 
@@ -17,7 +17,14 @@
   left: 0;
 	padding: 1rem 1rem 3rem;
   width: auto;
+  padding-inline: calc((100dvw - 1200px) / 2);
+
+  @media(max-width: 1262px) {
+    padding-inline: 2rem;
+  }
 }
+
+
 
 .orbit-caption h1 {
 	border: none;
@@ -88,7 +95,7 @@
   justify-content: stretch;
   /*min-height: 100vh;*/
 	max-height: 550px;
-	
+
 	&:has(video) {
 		height: 56.25dvw;
 	}

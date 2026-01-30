@@ -20,7 +20,7 @@
 
 
 /*.type-staff.full {
-	margin-top: .75rem;	
+	margin-top: .75rem;
 }*/
 
 @media(max-width:900px) {
@@ -71,7 +71,7 @@
 }
 
 
- 
+
 .type-staff.full .field-label {
 	font-weight: 700;
 	text-transform: uppercase;
@@ -82,7 +82,8 @@
 }
 
 .type-staff.full .field--name-field-position {
-	color: #b7c5ca;
+	/*color: #b7c5ca;*/
+  color: #657886;
 	font-size: 1rem;
 }
 
@@ -109,8 +110,8 @@
     }
 }
 
-.view-id-profiles .view-content > .column { 
-	margin: 0 0 1em; 
+.view-id-profiles .view-content > .column {
+	margin: 0 0 1em;
 }
 
 .view-id-profiles .view-content > .column > div {
