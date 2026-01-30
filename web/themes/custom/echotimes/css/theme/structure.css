@@ -366,7 +366,8 @@ textarea {
 /* STYLE - LINKS */
 a,
 a:visited {
-	color: #926f3a;
+	/*color: #926f3a;*/
+  color: #8b6937;
 }
 
 a:hover {
@@ -965,7 +966,7 @@ select {
 }
 
 .dropdown.menu>li.is-active>a {
-	color: #926f3a;
+	color: #8b6937;
 }
 
 .tabs-title {
