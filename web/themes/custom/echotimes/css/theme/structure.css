@@ -378,7 +378,8 @@ a:hover {
 a:active,
 .active a,
 a.active {
-	color: #a47c42;
+	/*color: #a47c42;*/
+  color: #926f3a;
 }
 
 /*.active a { font-style: italic; }*/
