@@ -144,7 +144,7 @@
 .type-event.teaser .field--name-field-date > .field-item:not(.month):not(.day),
 .type-event.teaser .field-field_location,
 .type-event.teaser .field--name-field-location {
-	color: #ccc;
+	color: #757575;
 	padding-bottom: .5rem;
 }
 

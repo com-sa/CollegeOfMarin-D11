@@ -998,7 +998,7 @@ ul.pagination li a {
 }
 
 ul.pagination li.current a {
-  background: #cc8f34;
+  background: #9b6d27;
   color: #fff;
   cursor: pointer;
 }
@@ -1151,7 +1151,7 @@ ul.pagination li.current a:focus {
 .view-featured .views-row h2 a:visited,
 .view-featured .views-row h2 a:hover,
 .view-featured .views-row h2 a:active {
-	color: #cc8f34;
+	color: #9b6d27;
 }
 
 .view-featured .view-footer a {
