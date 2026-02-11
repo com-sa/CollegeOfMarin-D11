@@ -373,7 +373,9 @@
   max-height: 90dvh;
   overflow: hidden;
 
-  & > .gsc-above-wrapper-area-container {
+  & > .gsc-above-wrapper-area {
+    max-width: unset !important;
+
     tr {
       align-items: center;
       display: flex;
@@ -383,6 +385,7 @@
   }
 
   & > .gsc-wrapper {
+    max-width: unset !important;
     overflow: auto;
 
     .gsc-resultsRoot {
@@ -392,6 +395,7 @@
     .gsc-results {
       .gsc-result {
         border-bottom: 1px solid #ccc !important;
+        clear: both;
         margin-bottom: 1rem !important;
         padding-bottom: 1rem !important;
 
@@ -406,6 +410,15 @@
 
         .gs-image {
           border: unset !important;
+        }
+      }
+
+      .gsc-thumbnail:has(img) {
+        float:left;
+        margin-right: 1rem;
+
+        img {
+          object-fit: contain;
         }
       }
     }
