@@ -1888,12 +1888,14 @@ table th {
 
 
 #mc_embed_signup {
-  .asterisk {
-    color: #da3b1b;
+  .asterisk,
+	input.mce_inline_error,
+	div.mce_inline_error {
+    color: #da3b1b !important;
   }
 
   .button {
-    background-color: #4c5762;
-    color: #fefefe;
+    background-color: #4c5762 !important;
+    color: #fefefe !important;
   }
 }
