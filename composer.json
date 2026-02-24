@@ -24,6 +24,7 @@
         "cweagans/composer-patches": "^1.7",
         "drupal/admin_toolbar": "^3.6",
         "drupal/asset_injector": "^2.21",
+        "drupal/auditfiles": "^4.2",
         "drupal/block_class": "^3.0",
         "drupal/cas": "^3.0@beta",
         "drupal/cas_attributes": "^3.0@beta",
