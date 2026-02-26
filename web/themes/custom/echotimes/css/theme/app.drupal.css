@@ -195,3 +195,57 @@
 #layout-builder-components-table tr.draggable .tabledrag-handle .handle {
     height: 1rem;
 }
+
+
+
+
+
+
+body.maintenance-page {
+  header {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    padding: 1rem 2rem 2rem;
+
+    img {
+      width: 250px;
+    }
+
+    h1 {
+      border: none;
+      padding: 0;
+    }
+  }
+
+  main {
+    padding: 2rem;
+
+    & > h1:first-child {
+      margin-bottom: 1rem;
+    }
+
+
+    details {
+      border: 1px solid #ccc;
+      margin-bottom: .5rem;
+      padding: .5rem;
+
+      summary:not(.system-status-report__status-icon) {
+        padding-left: .25rem;
+      }
+    }
+
+    .system-status-report__entry__value {
+        padding: .5rem;
+    }
+  }
+
+  aside {
+    padding: 0rem 2rem 0 3.25rem;
+
+    ol {
+        margin: 0;
+    }
+  }
+}
