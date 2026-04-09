@@ -15,7 +15,7 @@
         },
         {
             "type": "path",
-            "url": "upstream-configuration"
+            "url": "upstream-configuration/locked"
         }
     ],
     "require": {
@@ -80,14 +80,15 @@
     "config": {
         "allow-plugins": {
             "composer/installers": true,
-            "drupal/core-composer-scaffold": true,
-            "drupal/core-recipe-unpack": true,
-            "drupal/core-project-message": true,
-            "phpstan/extension-installer": true,
+            "cweagans/composer-patches": true,
             "dealerdirect/phpcodesniffer-composer-installer": true,
+            "drupal/core-composer-scaffold": true,
+            "drupal/core-project-message": true,
+            "drupal/core-recipe-unpack": true,
+            "pantheon-systems/upstream-management": true,
             "php-http/discovery": true,
             "php-tuf/composer-integration": true,
-            "cweagans/composer-patches": true,
+            "phpstan/extension-installer": true,
             "tbachert/spi": true
         },
         "sort-packages": true,
@@ -131,5 +132,8 @@
     "scripts": {
         "pre-update-cmd": ["DrupalComposerManaged\\ComposerScripts::preUpdate"],
         "post-update-cmd": ["DrupalComposerManaged\\ComposerScripts::postUpdate"]
+    },
+    "require-dev": {
+        "pantheon-systems/upstream-management": "^1"
     }
 }

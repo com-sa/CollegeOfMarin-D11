@@ -97,3 +97,5 @@
 #/.env
 .DS_Store
 web/sites/default/default.settings.php
+
+/composer.lock
