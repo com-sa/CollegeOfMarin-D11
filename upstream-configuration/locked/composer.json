@@ -9,12 +9,12 @@
         }
     ],
     "require": {
-        "drupal/core-recommended": "11.3.6",
+        "drupal/core-recommended": "11.3.9",
         "asm89/stack-cors": "v2.3.0",
         "composer/semver": "3.4.4",
         "doctrine/lexer": "3.0.1",
-        "drupal/core": "11.3.6",
-        "drupal/core-composer-scaffold": "11.3.6",
+        "drupal/core": "11.3.9",
+        "drupal/core-composer-scaffold": "11.3.9",
         "egulias/email-validator": "4.0.4",
         "guzzlehttp/guzzle": "7.10.0",
         "guzzlehttp/promises": "2.3.0",
