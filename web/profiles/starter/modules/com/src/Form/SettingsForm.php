@@ -28,7 +28,7 @@ class SettingsForm extends ConfigFormBase {
 			->set('google_cse_cx', $form_state->getValue('google_cse_cx'))
 			->set('disabled_layouts', $form_state->getValue('disabled_layouts'))
 			->set('header_active_menu', $form_state->getValue('header_active_menu'))
-			->set('footer_active_menu', $form_state->getValue('footer_active_menu'))			
+			->set('footer_active_menu', $form_state->getValue('footer_active_menu'))
 			->save();
 
 		parent::submitForm($form, $form_state);
@@ -40,8 +40,8 @@ class SettingsForm extends ConfigFormBase {
 	protected function getEditableConfigNames() {
     	return ['com.settings'];
 	}
-	
-	
+
+
 	/**
 	 * {@inheritdoc}
 	 */
@@ -49,7 +49,8 @@ class SettingsForm extends ConfigFormBase {
 		$files[''] = "None";
 		$themes = ['echotimes','subtheme'];
 		foreach($themes as $theme) {
-			$scanned = \Drupal::service('file_system')->scanDirectory(drupal_get_path('theme', $theme).'/templates/includes/menus/'.$key, '/.*\.twig$/');
+      $path = \Drupal::service('extension.list.theme')->getPath($theme);
+			$scanned = \Drupal::service('file_system')->scanDirectory($path.'/templates/includes/menus/'.$key, '/.*\.twig$/');
 			foreach($scanned as $path => $scan) { $files[$path] = $theme . ' - ' . $scan->filename;	}
 		}
 
@@ -141,11 +142,11 @@ class SettingsForm extends ConfigFormBase {
 
 
 
-		
+
 		$header_files = $this->getTemplateFilesByName('header');
 		$header_default_if_unset = array_search('default.html.twig', $header_files);
 		$header_current = $config->get('header_active_menu');
-		
+
 		$form['menus']['header_active_menu'] = [
 			'#type' => 'select',
 			'#options' => $header_files,
@@ -153,18 +154,18 @@ class SettingsForm extends ConfigFormBase {
 			'#default_value' => !is_null($header_current) ? $header_current : $header_default_if_unset,
 		];
 
-		
-		
+
+
 		$footer_files = $this->getTemplateFilesByName('footer');
 		$footer_default_if_unset = array_search('default.html.twig', $footer_files);
 		$footer_current = $config->get('footer_active_menu');
-		
+
 		$form['menus']['footer_active_menu'] = [
 			'#type' => 'select',
 			'#options' => $footer_files,
 			'#title' => t('Footer Active Menu'),
 			'#default_value' => !is_null($footer_current) ? $footer_current : $footer_default_if_unset,
-		];		
+		];
 
 
 		return parent::buildForm($form, $form_state);
