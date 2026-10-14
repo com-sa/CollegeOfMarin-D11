@@ -27,7 +27,8 @@
 	margin-top: 1.25rem;
 }*/
 
-.views-row:first-child .type-event.teaser {
+.views-row:first-child .type-event.teaser,
+.views-row:first-child .type-event.teaser_past {
 	margin-top: 0;
 }
 
@@ -68,33 +69,40 @@
 }
 
 .type-event.teaser .field-title + .field-field_date .field--node-field-date,
-.type-event.teaser .layout-builder-item:has(.field--name-title) + .layout-builder-item:has(.field-field_date) .field--node-field-date {
+.type-event.teaser .layout-builder-item:has(.field--name-title) + .layout-builder-item:has(.field-field_date) .field--node-field-date,
+.type-event.teaser_past .field-title + .field-field_date .field--node-field-date,
+.type-event.teaser_past .layout-builder-item:has(.field--name-title) + .layout-builder-item:has(.field-field_date) .field--node-field-date {
 	text-align: left;
 }
 
 .type-event .field--name-field-date .month,
-.type-event.teaser .field-field_date .month {
+.type-event.teaser .field-field_date .month,
+.type-event.teaser_past .field-field_date .month {
 	font-size: 1rem;
 }
 
 .type-event .field--name-field-date .da,
-.type-event.teaser .field-field_date .day {
+.type-event.teaser .field-field_date .day,
+.type-event.teaser_past .field-field_date .day {
 	font-size: 1.6875rem;
 }
 
 
-.type-event.teaser .cell:has(.block):last-child {
+.type-event.teaser .cell:has(.block):last-child,
+.type-event.teaser_past .cell:has(.block):last-child {
 	display: grid;
 	gap: 0.5rem 1rem;
 }
 
 @media(min-width:601px) {
-	.type-event.teaser .cell:has(.block):last-child {
+	.type-event.teaser .cell:has(.block):last-child,
+  .type-event.teaser_past .cell:has(.block):last-child {
 		grid-template-rows: auto auto auto;
 		grid-template-columns: 100px auto;
 	}
 
-	.type-event.teaser {
+	.type-event.teaser,
+  .type-event.teaser_past {
 		.field-title,
 		.field-body,
 		.layout-builder-item:has(.field--name-title),
@@ -109,7 +117,9 @@
 }
 
 .type-event.teaser .cell > .block,
-#region-content .type-event.teaser .cell > .block {
+#region-content .type-event.teaser .cell > .block,
+.type-event.teaser_past .cell > .block,
+#region-content .type-event.teaser_past .cell > .block {
 	margin-block: 0;
 }
 
@@ -136,27 +146,38 @@
 .type-event.teaser .field-title + .field-field_date,
 .type-event.teaser .field-field_location,
 .type-event.teaser .layout-builder-item:has(.field--name-field-location),
-.type-event.teaser .layout-builder-item:has(.field--name-title) + .layout-builder-item:has(.field-field_date) {
+.type-event.teaser .layout-builder-item:has(.field--name-title) + .layout-builder-item:has(.field-field_date),
+.type-event.teaser_past .field-title + .field-field_date,
+.type-event.teaser_past .field-field_location,
+.type-event.teaser_past .layout-builder-item:has(.field--name-field-location),
+.type-event.teaser_past .layout-builder-item:has(.field--name-title) + .layout-builder-item:has(.field-field_date) {
 	display: inline-block;
 }
 
 .type-event.teaser .field--name-field-date > .field__item:not(.month):not(.day),
 .type-event.teaser .field--name-field-date > .field-item:not(.month):not(.day),
 .type-event.teaser .field-field_location,
-.type-event.teaser .field--name-field-location {
+.type-event.teaser .field--name-field-location,
+.type-event.teaser_past .field--name-field-date > .field__item:not(.month):not(.day),
+.type-event.teaser_past .field--name-field-date > .field-item:not(.month):not(.day),
+.type-event.teaser_past .field-field_location,
+.type-event.teaser_past .field--name-field-location {
 	color: #757575;
 	padding-bottom: .5rem;
 }
 
 @media(min-width:601px) {
 	.type-event.teaser .field-field_location,
-	.type-event.teaser .layout-builder-item:has(.field--name-field-location) {
+	.type-event.teaser .layout-builder-item:has(.field--name-field-location),
+  .type-event.teaser_past .field-field_location,
+  .type-event.teaser_past .layout-builder-item:has(.field--name-field-location) {
 		margin-left: 3rem;
 		text-align: right;
 	}
 }
 
-.type-event.teaser > div {
+.type-event.teaser > div,
+.type-event.teaser_past > div {
   display: flex;
   gap: 0.75rem;
   align-items: center;
