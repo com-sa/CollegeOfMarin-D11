@@ -1221,7 +1221,8 @@ ul.pagination li.current a:focus {
   color: #ccc;
 }*/
 
-.view.display-type-page .views-row:not(:last-child) article.teaser {
+.view.display-type-page .views-row:not(:last-child) article.teaser,
+.view.display-type-page .views-row:not(:last-child) article.teaser_past {
 	padding-bottom: 2rem;
 }
 
