@@ -62,6 +62,8 @@
 /web/profiles/contrib/
 /web/libraries/
 /web/private/scripts/quicksilver
+/web/.htaccess
+/web/sites/example.settings.local.php
 
 
 # Generally you should only ignore the root vendor directory. It's important
